@@ -220,13 +220,13 @@ export default function ProgrammeSlider() {
               KHDA Approved Programmes
             </p> */}
 
-            <h2 className="text-5xl sm:text-6xl font-bold  mb-6
+            <h2 className="text-4xl sm:text-6xl font-bold  mb-6
   text-white leading-tight ">
          
               Reshape Your Future
             </h2>
 
-            <p className="mt-3 max-w-2xl text-white  sm:text-lg">
+            <p className="mt-2 max-w-2xl text-white  sm:text-lg">
               Embrace a range of dynamic programmes tailored for your success.
             </p>
           </div>

@@ -67,13 +67,13 @@ export default function HeroSlider() {
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
-          initial={{ opacity: 0, scale: 0.96 }}
+          initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 1.04 }}
+          exit={{ opacity: 0, scale: 1.03 }}
           transition={{ duration: 0.8 }}
           className="absolute inset-0"
         >
-          {/* ================= IMAGE ================= */}
+          {/* IMAGE */}
           <div className="absolute inset-0">
             <Image
               src={slides[index].image}
@@ -84,25 +84,57 @@ export default function HeroSlider() {
               className={`object-cover ${slides[index].position}`}
             />
 
-            {/* 🌈 COLORFUL GLOW LAYERS */}
-            <div className="absolute inset-0 bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.45),transparent_60%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.35),transparent_60%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.25),transparent_65%)]" />
+            {/* 🔴 RED GLOW (CALM ON MOBILE) */}
+            <div
+              className="
+                absolute inset-0
+                bg-[radial-gradient(300px_circle_at_30%_40%,rgba(239,68,68,0.22),transparent_65%)]
+                sm:bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.45),transparent_60%)]
+              "
+            />
 
-            {/* light contrast */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/55" />
+            {/* 🔵 BLUE GLOW */}
+            <div
+              className="
+                absolute inset-0
+                bg-[radial-gradient(260px_circle_at_70%_30%,rgba(59,130,246,0.18),transparent_70%)]
+                sm:bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.35),transparent_60%)]
+              "
+            />
 
-            {/* subtle grain */}
-            <div className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:24px_24px]" />
+            {/* 🟣 PURPLE GLOW */}
+            <div
+              className="
+                absolute inset-0
+                bg-[radial-gradient(240px_circle_at_50%_70%,rgba(168,85,247,0.12),transparent_70%)]
+                sm:bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.25),transparent_65%)]
+              "
+            />
+
+            {/* DARK OVERLAY */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/70" />
+
+            {/* GRAIN */}
+            <div className="absolute inset-0 opacity-[0.04] sm:opacity-[0.06]
+              [background-image:radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)]
+              [background-size:24px_24px]"
+            />
           </div>
 
-          {/* ================= CONTENT ================= */}
+          {/* CONTENT */}
           <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-4 sm:px-6 lg:px-8">
             <div className="relative max-w-3xl pt-24 sm:pt-32">
-              {/* text halo */}
-              <div className="absolute -inset-32 bg-[radial-gradient(circle,rgba(239,68,68,0.18),transparent_70%)] -z-10" />
+              {/* TEXT HALO (REDUCED ON MOBILE) */}
+              <div
+                className="
+                  absolute -inset-24 sm:-inset-32
+                  bg-[radial-gradient(circle,rgba(239,68,68,0.12),transparent_75%)]
+                  sm:bg-[radial-gradient(circle,rgba(239,68,68,0.18),transparent_70%)]
+                  -z-10
+                "
+              />
 
-              {/* Badge */}
+              {/* BADGE */}
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur mb-6">
                 <Sparkles className="h-4 w-4 text-red-400" />
                 <span className="text-sm font-semibold text-white">
@@ -110,13 +142,18 @@ export default function HeroSlider() {
                 </span>
               </div>
 
-              {/* Title */}
+              {/* TITLE */}
               <motion.h1
                 key={slides[index].title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.8)]"
+                className="
+                  text-4xl sm:text-6xl lg:text-7xl
+                  font-extrabold leading-[1.05]
+                  text-white
+                  drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)]
+                "
               >
                 {slides[index].title.split(" ").slice(0, -1).join(" ")}{" "}
                 <span className="bg-gradient-to-r from-red-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">
@@ -124,12 +161,12 @@ export default function HeroSlider() {
                 </span>
               </motion.h1>
 
-              {/* Subtitle */}
-              <p className="mt-6 text-lg sm:text-xl text-white/90 max-w-2xl">
+              {/* SUBTITLE */}
+              <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-2xl">
                 {slides[index].subtitle}
               </p>
 
-              {/* Buttons (hidden on mobile) */}
+              {/* BUTTONS (DESKTOP ONLY – GOOD UX) */}
               <div className="mt-10 hidden sm:flex gap-4">
                 <a
                   href={slides[index].href}
@@ -152,7 +189,7 @@ export default function HeroSlider() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Dots */}
+      {/* DOTS */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
         {slides.map((_, i) => (
           <button

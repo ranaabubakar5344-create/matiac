@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 type Programme = {
   level: "EDUQUAL LEVEL 3" | "EDUQUAL LEVEL 4" | "EDUQUAL LEVEL 5";
@@ -364,14 +365,26 @@ export default function ProgrammeSlider() {
                           {p.level}
                         </p> */}
 
-                        <h3 className="mt-4 text-xl sm:text-2xl font-extrabold leading-tight text-white">
+                        <h3 className=" text-2xl sm:text-3xl font-extrabold leading-tight text-white">
                           {p.title}
                         </h3>
                       </div>
 
-                      <div className="h-12 w-12 rounded-full bg-white/10 backdrop-blur border border-white/15 flex items-center justify-center text-white transition group-hover:bg-white/20">
-                        →
-                      </div>
+                  {/* <div
+  className="
+    h-12 w-12 rounded-full
+    border border-white/20
+    bg-white/10 backdrop-blur
+    flex items-center justify-center
+    transition-all duration-300
+    group-hover:bg-red-500
+    group-hover:border-red-500
+    group-hover:scale-110
+  "
+>
+  <ArrowRight className="h-5 w-5 text-white" />
+</div> */}
+
                     </div>
 
                     {/* bottom pills */}

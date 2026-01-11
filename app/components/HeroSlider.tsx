@@ -171,11 +171,21 @@ export default function HeroSlider() {
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`transition-all ${
-              i === index
-                ? "w-10 h-2 bg-gradient-to-r from-red-500 to-pink-500"
-                : "w-2 h-2 bg-white/40"
-            } rounded-full`}
+            className={`rounded-full transition-all duration-300 ${
+  i === index
+    ? `
+        w-8 h-2
+        bg-red-500/70
+        sm:w-10
+        sm:bg-gradient-to-r sm:from-red-500 sm:to-pink-500
+      `
+    : `
+        w-2 h-2
+        bg-white/30
+        sm:bg-white/40
+      `
+}`}
+
           />
         ))}
       </div>

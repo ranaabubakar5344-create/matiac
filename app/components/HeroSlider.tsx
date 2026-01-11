@@ -63,7 +63,7 @@ export default function HeroSlider() {
   }, [slides.length]);
 
   return (
-    <section className="relative h-[65svh] sm:h-screen w-full overflow-hidden bg-[#07080f]">
+    <section className="relative h-[85svh] sm:h-screen w-full overflow-hidden bg-[#07080f]">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -128,13 +128,13 @@ export default function HeroSlider() {
                 "
               />
 
-              {/* BADGE */}
+              {/* BADGE
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-red-600 px-5 py-2  mb-6">
                 <Sparkles className="h-4 w-4 text-white" />
                 <span className="text-sm font-semibold text-white">
                   {slides[index].badge}
                 </span>
-              </div>
+              </div> */}
 
               {/* TITLE */}
               <motion.h1

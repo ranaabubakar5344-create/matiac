@@ -84,35 +84,46 @@ export default function HeroSlider() {
               className={`object-cover ${slides[index].position}`}
             />
 
-            {/* 🔴 RED GLOW (CALM ON MOBILE) */}
-            <div
-              className="
-                absolute inset-0
-                bg-[radial-gradient(300px_circle_at_30%_40%,rgba(239,68,68,0.22),transparent_65%)]
-                sm:bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.45),transparent_60%)]
-              "
-            />
+         <div
+  className="
+    absolute inset-0
+    bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.18),transparent_60%)]
+    sm:bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.45),transparent_60%)]
+  "
+/>
 
-            {/* 🔵 BLUE GLOW */}
-            <div
-              className="
-                absolute inset-0
-                bg-[radial-gradient(260px_circle_at_70%_30%,rgba(59,130,246,0.18),transparent_70%)]
-                sm:bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.35),transparent_60%)]
-              "
-            />
 
-            {/* 🟣 PURPLE GLOW */}
-            <div
-              className="
-                absolute inset-0
-                bg-[radial-gradient(240px_circle_at_50%_70%,rgba(168,85,247,0.12),transparent_70%)]
-                sm:bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.25),transparent_65%)]
-              "
-            />
+        <div
+  className="
+    absolute inset-0
+    bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.12),transparent_60%)]
+    sm:bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.35),transparent_60%)]
+  "
+/>
+
+
+        <div
+  className="
+    absolute inset-0
+    bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.10),transparent_65%)]
+    sm:bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.25),transparent_65%)]
+  "
+/>
+
 
             {/* DARK OVERLAY */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/70" />
+<div
+  className="
+    absolute inset-0
+    bg-gradient-to-b
+    from-black/55
+    via-black/40
+    to-black/75
+    sm:from-black/20
+    sm:via-transparent
+    sm:to-black/55
+  "
+/>
 
             {/* GRAIN */}
             <div className="absolute inset-0 opacity-[0.04] sm:opacity-[0.06]

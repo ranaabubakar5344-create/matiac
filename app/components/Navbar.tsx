@@ -24,14 +24,20 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={[
-        "fixed inset-x-0 top-0 z-50",
-        "bg-black text-white", // ✅ always black
-        "transition-all duration-300",
-        scrolled ? "border-b border-white/15" : "border-b border-white/10",
-      ].join(" ")}
-    >
+  <header
+  className={[
+    "fixed inset-x-0 top-0 z-50",
+    "text-white",
+    "transition-all duration-300",
+    // background behavior
+    scrolled
+      ? "bg-black border-b border-white/15"
+      : "bg-transparent border-b border-transparent",
+    // desktop always solid
+   
+  ].join(" ")}
+>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}

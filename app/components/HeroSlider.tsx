@@ -87,8 +87,26 @@ export default function HeroSlider() {
 
 
 
+  {/* DESKTOP GLOWS ONLY */}
+<div className="absolute inset-0 hidden sm:block
+  bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.45),transparent_60%)]" />
 
-            {/* DARK OVERLAY */}
+<div className="absolute inset-0 hidden sm:block
+  bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.35),transparent_60%)]" />
+
+<div className="absolute inset-0 hidden sm:block
+  bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.25),transparent_65%)]" />
+
+{/* MOBILE ONLY SOFT OVERLAY */}
+<div
+  className="
+    absolute inset-0
+    bg-black/40
+    sm:hidden
+    pointer-events-none
+  "
+/>
+
 
             {/* GRAIN */}
             <div className="absolute inset-0 opacity-[0.04] sm:opacity-[0.06]
@@ -132,8 +150,9 @@ export default function HeroSlider() {
                 "
               >
                 {slides[index].title.split(" ").slice(0, -1).join(" ")}{" "}
-                <span className="bg-gradient-to-r from-red-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-400 bg-red-500 to-indigo-400 bg-clip-text text-transparent">
                   {slides[index].title.split(" ").slice(-1)}
+        
                 </span>
               </motion.h1>
 

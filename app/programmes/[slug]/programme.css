@@ -1,0 +1,169 @@
+.programme-root {
+  background: #0b0b0b;
+  color: #fff;
+}
+
+/* HERO */
+.programme-hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.programme-hero-img {
+  object-fit: cover;
+}
+
+.programme-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+.programme-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  padding: 0 24px;
+}
+
+.programme-level {
+  color: #ef4444;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.programme-title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  margin: 14px 0;
+}
+
+.programme-description {
+  max-width: 720px;
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+/* META */
+.programme-meta {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.meta-box span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.meta-box strong {
+  display: block;
+  font-size: 18px;
+}
+
+/* BODY */
+.programme-body {
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 24px;
+}
+
+.programme-section {
+  margin-bottom: 90px;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+/* AIMS */
+.aims-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.aim-card {
+  background: #111;
+  border: 1px solid #222;
+  padding: 22px;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.aim-card:hover {
+  border-color: #ef4444;
+  transform: translateY(-4px);
+}
+
+/* INFO */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 40px;
+}
+
+.info-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+/* SEMESTERS */
+.semester-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.semester-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.semester-card h3 {
+  color: #ef4444;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.semester-card li {
+  margin-bottom: 10px;
+  color: #e5e7eb;
+}
+
+/* CTA */
+.programme-cta {
+  text-align: center;
+}
+
+.apply-btn {
+  background: #ef4444;
+  border: none;
+  padding: 16px 46px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  background: #dc2626;
+}

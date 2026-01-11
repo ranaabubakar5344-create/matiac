@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+
+:root{
+  --brand-bg: #0B0B0B;
+  --brand-red: #E10600;
+  --brand-red-dark: #B80000;
+
+  --brand-text: #FFFFFF;
+  --brand-muted: rgba(255,255,255,0.75);
+  --brand-border: rgba(255,255,255,0.12);
+  --brand-soft: rgba(255,255,255,0.06);
+}
+
+/* Metaverse theme marquee */
+@keyframes metaverse-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.metaverse-marquee-track{
+  animation: metaverse-marquee 28s linear infinite;
+  will-change: transform;
+}
+
+.metaverse-marquee:hover .metaverse-marquee-track{
+  animation-play-state: paused;
+}
+/* ===== Scrollbar (Chrome/Edge/Safari) ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0b0b; /* track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ef4444; /* thumb (red) */
+  border-radius: 999px;
+  border: 2px solid #0b0b0b; /* nice premium spacing */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4d4d;
+}
+
+/* ===== Scrollbar (Firefox) ===== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ef4444 #0b0b0b; /* thumb track */
+}
+
+/* ===== Hide scrollbar on mobile (best practical) ===== */
+@media (max-width: 768px) {
+  /* Chrome/Edge/Safari */
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+  }
+}
+
+/* 🔒 Hide horizontal & vertical scrollbars */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
+}

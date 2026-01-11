@@ -167,10 +167,14 @@ slider.scrollBy({ left: cardWidth + 24, behavior: "smooth" });
   ref={sliderRef}
   onMouseEnter={pauseAutoSlide}
   onMouseLeave={resumeAutoSlide}
-  className="flex gap-6 px-4 sm:px-6
+ className="
+  flex gap-6
+  pl-4 pr-4 sm:px-6
   overflow-x-auto scroll-smooth
-  snap-x snap-mandatory
-  scrollbar-hide"
+  snap-x snap-proximity
+  scrollbar-hide
+"
+
 >
 
 
@@ -181,7 +185,7 @@ slider.scrollBy({ left: cardWidth + 24, behavior: "smooth" });
   key={course.href}
   href={course.href}
   className="group shrink-0
-  w-full sm:w-[340px]
+w-[82%] sm:w-[340px]
   snap-center
   bg-white text-black rounded-[22px]
   shadow-2xl hover:-translate-y-2 transition-all"

@@ -63,7 +63,7 @@ export default function HeroSlider() {
   }, [slides.length]);
 
   return (
-    <section className="relative h-[85svh] sm:h-screen w-full overflow-hidden bg-[#07080f]">
+    <section className="relative h-[75svh] sm:h-screen w-full overflow-hidden bg-[#07080f]">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}

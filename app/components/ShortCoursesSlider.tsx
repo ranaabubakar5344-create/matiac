@@ -218,29 +218,17 @@ w-[82%] sm:w-[340px]
               </h3>
 
               {/* PILLS */}
-            {/* PILLS */}
-<div
-  className="
-    mt-4
-    flex gap-2
-    overflow-x-auto
-    whitespace-nowrap
-    scrollbar-hide
-    sm:flex-wrap
-    sm:overflow-visible
-  "
->
-  <span className="shrink-0 px-3 py-1 rounded-full text-xs bg-blue-100 text-blue-700">
-    Industry Ready
-  </span>
-  <span className="shrink-0 px-3 py-1 rounded-full text-xs bg-green-100 text-green-700">
-    Job Support
-  </span>
-  <span className="shrink-0 px-3 py-1 rounded-full text-xs bg-purple-100 text-purple-700">
-    Certificate
-  </span>
-</div>
-
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="px-3 py-1 rounded-full text-xs bg-blue-100 text-blue-700">
+                  Industry Ready
+                </span>
+                <span className="px-3 py-1 rounded-full text-xs bg-green-100 text-green-700">
+                  Job Support
+                </span>
+                <span className="px-3 py-1 rounded-full text-xs bg-purple-100 text-purple-700">
+                  Certificate
+                </span>
+              </div>
 
               {/* CTA */}
               <button className="mt-6 w-full rounded-xl

@@ -197,12 +197,18 @@ export default function ProgrammeSlider() {
   return (
 <section className="relative text-white overflow-hidden
   bg-gradient-to-br from-[#0b0b0f] via-[#0f0f1a] to-[#050507]">
+
       {/* Premium background glow */}
 
-            {/* 🌈 COLORFUL GLOW LAYERS */}
-            <div className="absolute inset-0 bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.45),transparent_60%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.35),transparent_60%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.25),transparent_65%)]" />
+       {/* 🌈 DESKTOP ONLY GLOW */}
+<div className="absolute inset-0 hidden sm:block
+  bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.45),transparent_60%)]" />
+
+<div className="absolute inset-0 hidden sm:block
+  bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.35),transparent_60%)]" />
+
+<div className="absolute inset-0 hidden sm:block
+  bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.25),transparent_65%)]" />
 
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">

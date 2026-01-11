@@ -226,7 +226,7 @@ export default function ProgrammeSlider() {
               Reshape Your Future
             </h2>
 
-            <p className="mt-3 max-w-2xl text-white/70 text-base sm:text-lg">
+            <p className="mt-3 max-w-2xl text-white  sm:text-lg">
               Embrace a range of dynamic programmes tailored for your success.
             </p>
           </div>

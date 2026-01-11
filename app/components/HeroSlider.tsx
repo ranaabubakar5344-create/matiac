@@ -129,8 +129,8 @@ export default function HeroSlider() {
               />
 
               {/* BADGE */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur mb-6">
-                <Sparkles className="h-4 w-4 text-red-400" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-red-600 px-5 py-2  mb-6">
+                <Sparkles className="h-4 w-4 text-white" />
                 <span className="text-sm font-semibold text-white">
                   {slides[index].badge}
                 </span>

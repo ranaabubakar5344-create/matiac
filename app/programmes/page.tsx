@@ -20,8 +20,8 @@ import {
   Clock,
   Users,
 } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+
 
 type Level = "EDUQUAL LEVEL 3" | "EDUQUAL LEVEL 4" | "EDUQUAL LEVEL 5";
 
@@ -57,7 +57,7 @@ const PROGRAMMES: Programme[] = [
     tag: "KHDA Approved",
     desc: "Business fundamentals designed for working professionals clear modules.",
     outcomes: ["Management Basics", "Planning", "Workplace Skills"],
-    duration: "9 months",
+    duration: "12 months",
     students: "800+",
   },
   {
@@ -66,9 +66,9 @@ const PROGRAMMES: Programme[] = [
     href: "/programmes/creative-computing-l4",
     image: "/cre.jpg",
     tag: "KHDA Approved",
-    desc: "Hands-on learning with structured tasks that build practical computing skills and confidence.",
+    desc: "Hands-on learning with structured tasks that build practical computing skills.",
     outcomes: ["Practical Projects", "Problem Solving", "Portfolio Start"],
-    duration: "9 months",
+    duration: "12 months",
     students: "650+",
   },
   {
@@ -79,7 +79,7 @@ const PROGRAMMES: Programme[] = [
     tag: "KHDA Approved",
     desc: "Core psychology concepts delivered in a clear pathway with guidance and consistent progress.",
     outcomes: ["Core Concepts", "Structured Learning", "Assessment Clarity"],
-    duration: "9 months",
+    duration: "12 months",
     students: "420+",
   },
   {
@@ -90,7 +90,7 @@ const PROGRAMMES: Programme[] = [
     tag: "Popular",
     desc: "A strong foundation in cybersecurity with practical exercises aligned to real job roles.",
     outcomes: ["Security Basics", "Hands-on Tasks", "Career Aligned"],
-    duration: "9 months",
+    duration: "12 months",
     students: "920+",
   },
   {
@@ -101,7 +101,7 @@ const PROGRAMMES: Programme[] = [
     tag: "New",
     desc: "Modern media learning with structured assignments and portfolio-focused improvement.",
     outcomes: ["Creative Projects", "Modern Media", "Portfolio Build"],
-    duration: "9 months",
+    duration: "12 months",
     students: "380+",
   },
   {
@@ -155,14 +155,7 @@ function countBy(level: Level) {
 }
 
 export default function ProgrammesPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
+ 
 
  const filtered = PROGRAMMES;
 const selectedLevel = "ALL";
@@ -195,11 +188,13 @@ const selectedLevel = "ALL";
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
       {/* ULTRA PREMIUM HERO */}
-      <motion.section 
-        ref={heroRef}
-        style={{ opacity, scale }}
-        className="relative overflow-hidden pt-28 pb-20 lg:pt-40 lg:pb-32"
-      >
+     <motion.section
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  className="relative overflow-hidden pt-28 pb-20 lg:pt-40 lg:pb-32"
+>
+
         {/* Cinematic Background */}
         <div className="absolute inset-0">
           <Image
@@ -212,10 +207,10 @@ const selectedLevel = "ALL";
           />
           
           {/* Multi-layer gradients */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.15),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(139,92,246,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-black/98 to-red-950/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+          {/* <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.15),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(139,92,246,0.1),transparent_50%)]" /> */}
+          {/* <div className="absolute inset-0 bg-gradient-to-br from-black via-black/98 to-red-950/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" /> */}
           
           {/* Animated mesh gradient */}
           <motion.div 
@@ -229,15 +224,10 @@ const selectedLevel = "ALL";
               ease: "easeInOut",
             }}
             className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: `radial-gradient(circle at 20% 50%, rgba(220, 38, 38, 0.4) 0%, transparent 50%),
-                               radial-gradient(circle at 80% 80%, rgba(239, 68, 68, 0.3) 0%, transparent 50%),
-                               radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 40%)`
-            }}
+        
           />
           
           {/* Premium grid with glow */}
-          <div className="absolute inset-0 opacity-[0.12] [background-image:linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:64px_64px]" />
           
           {/* Floating orbs */}
           <motion.div
@@ -319,7 +309,7 @@ const selectedLevel = "ALL";
             >
               <span className="block">Reshape Your Future</span>
               <span className="block mt-2">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-red-200 to-red-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-red-00 to-red-400">
                   with Structured Pathways
                 </span>
               </span>
@@ -403,7 +393,7 @@ const selectedLevel = "ALL";
           </motion.div>
 
           {/* Level Explorer - Next Level Design */}
-          <motion.div
+          {/* <motion.div
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -439,7 +429,7 @@ const selectedLevel = "ALL";
                 <LevelExplorerCard {...item} count={countBy(item.level)} />
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </motion.section>
 
@@ -580,7 +570,7 @@ const selectedLevel = "ALL";
                     <Sparkles className="h-5 w-5 text-red-400" />
                     NEXT STEP
                   </motion.span>
-                  <h3 className="text-5xl sm:text-6xl font-bold leading-[1.1] mb-6 text-white">
+                  <h3 className="text-3xl sm:text-6xl font-bold leading-[1.1] mb-6 text-white">
                     Not sure which level{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-red-400">
                       fits you?
@@ -605,7 +595,7 @@ const selectedLevel = "ALL";
                       transition={{ duration: 0.4 }}
                     />
                     <span className="relative flex items-center gap-3">
-                      Contact Admissions
+                      Admissions
                       <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </span>
                   </Link>
@@ -805,7 +795,7 @@ function ProgrammeCard({ p }: { p: Programme }) {
           <p className="text-white/70 leading-relaxed mb-6">{p.desc}</p>
 
           {/* Outcomes - Refined chips */}
-          <div className="flex flex-wrap gap-2.5 mb-8">
+          {/* <div className="flex flex-wrap gap-2.5 mb-8">
             {p.outcomes.map((outcome) => (
               <motion.span
                 key={outcome}
@@ -816,7 +806,7 @@ function ProgrammeCard({ p }: { p: Programme }) {
                 {outcome}
               </motion.span>
             ))}
-          </div>
+          </div> */}
 
           {/* CTA Button - Premium design */}
           <motion.div

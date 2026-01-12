@@ -305,9 +305,9 @@ const selectedLevel = "ALL";
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="font-serif text-5xl sm:text-7xl lg:text-8xl leading-[1.05] tracking-tight mb-8"
+              className="font-serif text-4xl sm:text-7xl lg:text-8xl leading-[1.05] tracking-tight mb-8"
             >
-              <span className="block">Reshape Your Future</span>
+              <span className="block">Reshape Your Future </span>
               <span className="block mt-2">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-red-00 to-red-400">
                   with Structured Pathways

@@ -730,7 +730,7 @@ function ProgrammeCard({ p }: { p: Programme }) {
         className="group relative block overflow-hidden rounded-[32px] border border-white/15 bg-gradient-to-br from-white/[0.12] to-white/[0.04] backdrop-blur-3xl transition-all duration-500 hover:border-white/30 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
       >
         {/* Image Container - Enhanced */}
-        <div className="relative h-72 overflow-hidden">
+        <div className="relative h-52 overflow-hidden">
           <Image
             src={p.image}
             alt={p.title}

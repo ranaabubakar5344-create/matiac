@@ -220,15 +220,13 @@ export default function TestimonialsSection() {
             {/* Navigation */}
             <button
               onClick={prev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/60 backdrop-blur-xl hover:bg-black/80 transition"
+className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/60 backdrop-blur-xl hover:bg-black/80 transition"
             >
               <ChevronLeft className="h-5 w-5 text-white" />
             </button>
 
             <button
-              onClick={next}
-              className="absolute right-4 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/60 backdrop-blur-xl hover:bg-black/80 transition"
-            >
+              onClick={next} className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/60 backdrop-blur-xl hover:bg-black/80 transition" >
               <ChevronRight className="h-5 w-5 text-white" />
             </button>
           </div>

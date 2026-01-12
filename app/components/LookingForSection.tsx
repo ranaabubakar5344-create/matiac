@@ -192,7 +192,7 @@ useEffect(() => {
 
                 <div className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 backdrop-blur">
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                  Admissions open — apply today
+                  Admissions open - apply today
                 </div>
               </div>
             </div>

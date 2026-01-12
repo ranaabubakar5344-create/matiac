@@ -181,15 +181,15 @@ slider.scrollBy({ left: cardWidth + 24, behavior: "smooth" });
 
 
         {courses.map((course) => (
-  <a
-  key={course.href}
-  href={course.href}
+  <div
+  key={course.title}
   className="group shrink-0
-w-[82%] sm:w-[340px]
+  w-[82%] sm:w-[340px]
   snap-center
   bg-white text-black rounded-[22px]
   shadow-2xl hover:-translate-y-2 transition-all"
 >
+
 
 
 
@@ -238,7 +238,7 @@ w-[82%] sm:w-[340px]
               </button>
 
             </div>
-          </a>
+          </div>
         ))}
 
       </div>

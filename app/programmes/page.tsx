@@ -213,36 +213,12 @@ const selectedLevel = "ALL";
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" /> */}
           
           {/* Animated mesh gradient */}
-          <motion.div 
-            animate={{
-              opacity: [0.3, 0.5, 0.3],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute inset-0 opacity-20"
         
-          />
           
           {/* Premium grid with glow */}
           
           {/* Floating orbs */}
-          <motion.div
-            animate={{
-              y: [0, -30, 0],
-              x: [0, 20, 0],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute left-[10%] top-[20%] h-[500px] w-[500px] rounded-full bg-red-600/20 blur-[140px]"
-          />
+        
           <motion.div
             animate={{
               y: [0, 40, 0],
@@ -305,9 +281,9 @@ const selectedLevel = "ALL";
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="font-serif text-4xl sm:text-7xl lg:text-8xl leading-[1.05] tracking-tight mb-8"
+              className="font-serif text-5xl sm:text-7xl lg:text-8xl leading-[1.05] tracking-tight mb-8"
             >
-              <span className="block">Reshape Your Future </span>
+              <span className="block">Reshape Your Future</span>
               <span className="block mt-2">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-red-00 to-red-400">
                   with Structured Pathways
@@ -595,7 +571,7 @@ const selectedLevel = "ALL";
                       transition={{ duration: 0.4 }}
                     />
                     <span className="relative flex items-center gap-3">
-                      Admissions
+                      Contact Admissions
                       <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </span>
                   </Link>
@@ -730,7 +706,7 @@ function ProgrammeCard({ p }: { p: Programme }) {
         className="group relative block overflow-hidden rounded-[32px] border border-white/15 bg-gradient-to-br from-white/[0.12] to-white/[0.04] backdrop-blur-3xl transition-all duration-500 hover:border-white/30 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
       >
         {/* Image Container - Enhanced */}
-        <div className="relative h-52 overflow-hidden">
+        <div className="relative h-72 overflow-hidden">
           <Image
             src={p.image}
             alt={p.title}

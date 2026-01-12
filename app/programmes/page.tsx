@@ -231,7 +231,7 @@ const selectedLevel = "ALL";
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute right-[5%] top-[10%] h-[600px] w-[600px] rounded-full bg-purple-600/15 blur-[130px]"
+            className="absolute right-[5%] top-[10%] h-[600px] w-[600px] rounded-full "
           />
           <motion.div
             animate={{

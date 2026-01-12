@@ -94,10 +94,11 @@ export default function TestimonialsSection() {
       {/* Cinematic background */}
       {/* <div className="absolute inset-0 bg-gradient-to-b from-black via-red-950/10 to-black" />
       <div className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:32px_32px]" /> */}
- <div className="absolute inset-0 bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.45),transparent_60%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.25),transparent_65%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.35),transparent_60%)]" />
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+ <div className="absolute inset-0 hidden sm:block bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.45),transparent_60%)]" />
+<div className="absolute inset-0 hidden sm:block bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.25),transparent_65%)]" />
+<div className="absolute inset-0 hidden sm:block bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.35),transparent_60%)]" />
+
+<div className="relative w-full sm:mx-auto sm:max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -122,7 +123,10 @@ export default function TestimonialsSection() {
 
         {/* Testimonial Card */}
         <div className="relative">
-          <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.04] backdrop-blur-2xl p-10 sm:p-14">
+<div className="relative overflow-hidden rounded-[36px] border border-white/10 
+  bg-black sm:bg-white/[0.04] 
+  sm:backdrop-blur-2xl 
+  p-6 sm:p-14">
             {TESTIMONIALS.map((t, i) => (
               <motion.div
                 key={t.id}

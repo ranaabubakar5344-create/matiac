@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-
+import Link from "next/link";
 type ShortCourse = {
   title: string;
   image: string;
@@ -249,8 +249,8 @@ w-[82%] sm:w-[340px]
   </p> */}
 
   <div className="mt-3">
-    <a
-      href="/programmes"
+    <Link
+      href="/shortcourses"
       className="inline-flex items-center gap-3
       rounded-full px-8 py-4 text-base font-semibold
      bg-red-600
@@ -259,7 +259,7 @@ w-[82%] sm:w-[340px]
     >
       View All Courses
       <span className="text-xl">→</span>
-    </a>
+    </Link>
   </div>
 </div>
 

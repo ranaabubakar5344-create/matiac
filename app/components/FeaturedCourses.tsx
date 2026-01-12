@@ -34,7 +34,7 @@ export default function ProgrammeSlider() {
       {
         level: "EDUQUAL LEVEL 3",
         title: "Diploma in International Foundation Studies",
-        href: "/programmes/international-foundation-studies",
+        href: "/programmes/international-foundation-studies-l3",
         image: "/happy-graduated-students.jpg",
         tag: "KHDA Approved",
       },
@@ -138,39 +138,36 @@ export default function ProgrammeSlider() {
     updateCursor(e.clientX, e.clientY);
   };
 
-  const onPointerMove = (e: React.PointerEvent) => {
-    updateCursor(e.clientX, e.clientY);
+ const onPointerMove = (e: React.PointerEvent) => {
+  updateCursor(e.clientX, e.clientY);
 
-    const el = scrollerRef.current;
-    if (!el || !isDown.current) return;
+  const el = scrollerRef.current;
+  if (!el || !isDown.current) return;
 
-    // prevent native drag/selection while dragging
+  const rect = el.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const dx = x - startX.current;
+
+  if (!moved.current && Math.abs(dx) > MOVE_THRESHOLD) {
+    moved.current = true;
+    setDragging(true);
+  }
+
+  // ✅ ONLY prevent default when dragging
+  if (moved.current) {
     e.preventDefault();
-
-    const rect = el.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const dx = x - startX.current;
-
-    if (!moved.current && Math.abs(dx) > MOVE_THRESHOLD) {
-      moved.current = true;
-      setDragging(true);
-    }
-
     el.scrollLeft = startScroll.current - dx * DRAG_SPEED;
-  };
+  }
+};
+
 
   const endPointer = () => {
-    isDown.current = false;
-    setPressed(false);
+  isDown.current = false;
+  setPressed(false);
+  setDragging(false);
+  moved.current = false;
+};
 
-    // reset "dragging" UI quickly, but keep moved flag for click prevention
-    setTimeout(() => setDragging(false), 0);
-
-    // important: clear moved soon so next click works
-    setTimeout(() => {
-      moved.current = false;
-    }, 180);
-  };
 
   const onPointerUp = () => endPointer();
   const onPointerCancel = () => endPointer();
@@ -326,14 +323,14 @@ export default function ProgrammeSlider() {
                     "transition-transform duration-300 hover:-translate-y-1",
                     "md:cursor-none",
                   ].join(" ")}
-                  onClick={(e) => {
-                    // ✅ only block click if user actually dragged
-                    if (moved.current) {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      moved.current = false;
-                    }
-                  }}
+                onClick={(e) => {
+  if (dragging) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+}}
+
+                
                 >
                   <Image
                     src={p.image}

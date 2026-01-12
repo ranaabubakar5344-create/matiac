@@ -177,7 +177,7 @@ useEffect(() => {
 
                 <div className="mt-9 grid grid-cols-3 gap-3 max-w-lg">
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-                    <p className="text-xl font-extrabold">50+</p>
+                    <p className="text-xl font-extrabold">300+</p>
                     <p className="text-xs text-white/70">Courses</p>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">

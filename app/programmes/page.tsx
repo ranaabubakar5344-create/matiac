@@ -21,6 +21,7 @@ import {
   Users,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import ParticlesLayer from "@/app/components/ParticlesLayer";
 
 
 type Level = "EDUQUAL LEVEL 3" | "EDUQUAL LEVEL 4" | "EDUQUAL LEVEL 5";
@@ -196,7 +197,10 @@ const selectedLevel = "ALL";
 >
 
         {/* Cinematic Background */}
-        <div className="absolute inset-0">
+      
+          <div className="absolute inset-0 z-0 ">
+    <ParticlesLayer />
+  </div>
       <Image
   src="/metaverse-bg.jpg"
   alt="Programmes"
@@ -252,7 +256,6 @@ const selectedLevel = "ALL";
              hidden sm:block"
 />
 
-        </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div

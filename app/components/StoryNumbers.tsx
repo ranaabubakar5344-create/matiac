@@ -130,7 +130,7 @@ export default function StoryNumbersCarouselWhiteRB({
           A Story through Numbers
         </h2>
         <p className="mt-2 max-w-2xl text-black/60">
-          Credibility, outcomes, and scale — presented clearly in numbers.
+          Credibility, outcomes, and scale presented clearly in numbers.
         </p>
       </div>
 

@@ -142,7 +142,7 @@ slider.scrollBy({ left: cardWidth + 24, behavior: "smooth" });
         <h2 className="text-4xl sm:text-5xl font-extrabold">
           Featured Short Courses
         </h2>
-        <p className="mt-4 text-white/70 text-lg">
+        <p className="mt-4 text-white text-lg">
           Explore our most popular short courses designed for career success
         </p>
         <span className="mt-5 inline-block h-1 w-24 rounded-full bg-red-600" />

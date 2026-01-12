@@ -197,21 +197,9 @@ const selectedLevel = "ALL";
 >
 
         {/* Cinematic Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 z-0 hidden sm:block">
-    <ParticlesLayer />
-  </div>
-      <Image
-  src="/metaverse-bg.jpg"
-  alt="Programmes"
-  fill
-  priority
-  sizes="100vw"
-  className="object-cover object-center opacity-60 sm:opacity-30"
-/>
+
 
           {/* Mobile dark overlay */}
-<div className="absolute inset-0 bg-black/70 sm:hidden" />
 
           {/* Multi-layer gradients */}
           {/* <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.15),transparent_50%)]" />
@@ -226,37 +214,36 @@ const selectedLevel = "ALL";
           
           {/* Floating orbs */}
         
-          <motion.div
-            animate={{
-              y: [0, 40, 0],
-              x: [0, -30, 0],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 12,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-            className="absolute right-[5%] top-[10%] h-[600px] w-[600px] rounded-full "
-          />
-      <motion.div
-  animate={{
-    y: [0, -20, 0],
-    scale: [1, 1.15, 1],
-  }}
-  transition={{
-    duration: 9,
-    repeat: Infinity,
-    ease: "easeInOut",
-    delay: 2,
-  }}
-  className="absolute left-1/2 -translate-x-1/2 top-[30%] 
-             h-[700px] w-[900px] rounded-full bg-white/5 blur-[120px] 
-             hidden sm:block"
-/>
+        
+ {/* Cinematic Background */}
+<div className="absolute inset-0 bg-black sm:bg-transparent">
 
-        </div>
+  {/* Particles – Desktop only */}
+  <div className="absolute inset-0 ">
+    <ParticlesLayer />
+  </div>
+
+  {/* Background Image – Desktop only */}
+  <Image
+    src="/metaverse-bg.jpg"
+    alt="Programmes"
+    fill
+    priority
+    sizes="100vw"
+    className="hidden sm:block object-cover object-center opacity-30"
+  />
+
+  {/* Desktop glow */}
+  <motion.div
+    animate={{ y: [0, -20, 0], scale: [1, 1.15, 1] }}
+    transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+    className="absolute left-1/2 -translate-x-1/2 top-[30%]
+               h-[700px] w-[900px] rounded-full bg-white/5 blur-[120px]
+               hidden sm:block"
+  />
+</div>
+
+        
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -586,7 +573,7 @@ const selectedLevel = "ALL";
                       transition={{ duration: 0.4 }}
                     />
                     <span className="relative flex items-center gap-3">
-                      Contact Admissions
+                      Contact 
                       <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </span>
                   </Link>
@@ -718,17 +705,25 @@ function ProgrammeCard({ p }: { p: Programme }) {
     >
       <Link
         href={p.href}
-        className="group relative block overflow-hidden rounded-[32px] border border-white/15 bg-gradient-to-br from-white/[0.12] to-white/[0.04] backdrop-blur-3xl transition-all duration-500 hover:border-white/30 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
+        className="group relative block overflow-hidden rounded-[32px] border border-white/15   transition-all duration-500 hover:border-white/30 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
       >
         {/* Image Container - Enhanced */}
-        <div className="relative h-72 overflow-hidden">
-          <Image
-            src={p.image}
-            alt={p.title}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
-          />
+  <div className="relative h-72 overflow-hidden">
+  <Image
+    src={p.image}
+    alt={p.title}
+    fill
+    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+    className="object-cover transition-all duration-700 
+               group-hover:scale-110 group-hover:rotate-1"
+  />
+
+  {/* Gradient overlays */}
+  {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-br from-red-600/0 via-transparent to-red-600/20 
+                  opacity-0 transition-opacity duration-500 group-hover:opacity-100" /> */}
+
+
           
           {/* Multi-layer gradients */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />

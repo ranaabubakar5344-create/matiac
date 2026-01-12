@@ -249,16 +249,16 @@ export default async function ProgrammePage({ params }: PageProps) {
 
               <div className="mt-8 grid grid-cols-3 gap-4 max-w-lg">
                 <MetaBox label="Duration" value={programme.duration} color="from-red-500 to-orange-500" />
-  <MetaBox
-    label="Intake"
-    value={
-      <>
-        <span className="sm:hidden">Sept</span>
-        <span className="hidden sm:inline">September</span>
-      </>
-    }
-    color="from-indigo-500 to-purple-500"
-  />
+<MetaBox
+  label="Intake"
+  value={
+    <>
+      <span className="sm:hidden">Sept</span>
+      <span className="hidden sm:inline">September</span>
+    </>
+  }
+  color="from-indigo-500 to-purple-500"
+/>
                 <MetaBox label="Delivery" value={programme.delivery} color="from-emerald-500 to-teal-500" />
               </div>
 
@@ -372,7 +372,7 @@ function MetaBox({
   color,
 }: {
   label: string;
-  value: string;
+value: React.ReactNode;
   color: string;
 }) {
   return (

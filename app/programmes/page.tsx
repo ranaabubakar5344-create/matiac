@@ -197,15 +197,18 @@ const selectedLevel = "ALL";
 
         {/* Cinematic Background */}
         <div className="absolute inset-0">
-          <Image
-            src="/metaverse-bg.jpg"
-            alt="Programmes"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-30"
-          />
-          
+      <Image
+  src="/metaverse-bg.jpg"
+  alt="Programmes"
+  fill
+  priority
+  sizes="100vw"
+  className="object-cover object-center opacity-60 sm:opacity-30"
+/>
+
+          {/* Mobile dark overlay */}
+<div className="absolute inset-0 bg-black/70 sm:hidden" />
+
           {/* Multi-layer gradients */}
           {/* <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.15),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(139,92,246,0.1),transparent_50%)]" /> */}
@@ -233,19 +236,22 @@ const selectedLevel = "ALL";
             }}
             className="absolute right-[5%] top-[10%] h-[600px] w-[600px] rounded-full "
           />
-          <motion.div
-            animate={{
-              y: [0, -20, 0],
-              scale: [1, 1.15, 1],
-            }}
-            transition={{
-              duration: 9,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2,
-            }}
-            className="absolute left-1/2 -translate-x-1/2 top-[30%] h-[700px] w-[900px] rounded-full bg-white/5 blur-[120px]"
-          />
+      <motion.div
+  animate={{
+    y: [0, -20, 0],
+    scale: [1, 1.15, 1],
+  }}
+  transition={{
+    duration: 9,
+    repeat: Infinity,
+    ease: "easeInOut",
+    delay: 2,
+  }}
+  className="absolute left-1/2 -translate-x-1/2 top-[30%] 
+             h-[700px] w-[900px] rounded-full bg-white/5 blur-[120px] 
+             hidden sm:block"
+/>
+
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -260,7 +266,7 @@ const selectedLevel = "ALL";
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-gradient-to-r from-white/10 to-white/5 px-6 py-3 backdrop-blur-2xl shadow-2xl shadow-red-600/10 mb-8"
+              className="inline-flex items-center gap-3 rounded-full border border-white/20  from-white/10 to-white/5 px-6 py-3 backdrop-blur-2xl shadow-2xl shadow-red-600/10 mb-8"
             >
               <motion.div 
                 animate={{ scale: [1, 1.2, 1] }}
@@ -285,9 +291,14 @@ const selectedLevel = "ALL";
             >
               <span className="block">Reshape Your Future</span>
               <span className="block mt-2">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-red-00 to-red-400">
-                  with Structured Pathways
-                </span>
+               <span className="
+  text-white 
+  sm:text-transparent sm:bg-clip-text 
+  sm:bg-gradient-to-r sm:from-white sm:to-red-400
+">
+  with Structured Pathways
+</span>
+
               </span>
             </motion.h1>
 
@@ -498,7 +509,7 @@ const selectedLevel = "ALL";
               <motion.div key={p.href} variants={itemVariants}>
                 <ProgrammeCard p={p} />
               </motion.div>
-            ))}
+            ))}2
           </motion.div>
 
           {/* Bottom CTA - Cinema Grade */}

@@ -89,6 +89,7 @@ const CATEGORIES = [
       "Awareness Sessions on UAE Labour and Employment Law",
       "Human Resource Management for Managers",
       "Human Resources Information Systems (HRIS) Including ESS",
+      "Public Speaking"
     ],
   },
   {
@@ -103,7 +104,52 @@ const CATEGORIES = [
     title: "Construction & Built Environment",
     courses: ["Construction, Mechanical and Built Environment Skills Training"],
   },
+    {
+    title: "Training in AI",
+    courses: ["Training in Applied AI Incubation", "Training in Freelancing Advanced Skills","Training in Advanced AI-Led E-Commerce","Training in Advanced Skills for Canva AI Tools","Training in AI-Led Sales & Marketing",
+      "Training in AI-Led YouTube Monetization & Automation","Training in Emotional Intillegence Leadership",
+     "AI in Buisness",
+     "AI in Physcology",
+     "AI in Creative Computing",
+     "AI in Cyber Security",
+     "Utilizing ChatGPT-4 for maximum Effeciency",
+     "Prompt Engineering"
+    ],
+  },
+  {
+    title:"Coder Series",
+    courses:[
+      "Coder Series - Basic",
+      "Coder Series - Intermediate",
+      "Coder Series -  Expert",
+      "Coder Series  - Advance",
+    ],
+
+    
+  },
+    {
+    title:"Industrial Robotic Series",
+    courses:[
+      "Industrial Robotic Series - Basic",
+      "Industrial Robotic Series - Intermediate",
+      "Industrial Robotic Series -  Expert",
+      "Industrial Robotic Series  - Advance",
+    ]
+  },
+
+  {
+    title:"Astronomy Series",
+    courses:[
+      "Astronomy Seriess - Basic",
+      "Astronomy Series - Intermediate",
+      "Astronomy Series -  Expert",
+      "Astronomy Series - Advance",
+    ]
+
+  }
 ];
+
+
 
 export default function ShortCoursesPage() {
   return (

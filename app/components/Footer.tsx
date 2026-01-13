@@ -173,10 +173,10 @@ export default function FooterPremium() {
           </p>
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/55">
-            <Link href="/privacy" className="hover:text-white transition">
+            <Link href="/" className="hover:text-white transition">
               Privacy
             </Link>
-            <Link href="/terms" className="hover:text-white transition">
+            <Link href="/" className="hover:text-white transition">
               Terms
             </Link>
             <Link href="/contact" className="hover:text-white transition">

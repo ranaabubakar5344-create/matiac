@@ -196,7 +196,7 @@ export default function AboutPage() {
       </section>
 
       {/* ACCREDITATION */}
-<section className="relative z-10 py-32 bg-gradient-to-b from-black to-red-950/10">
+<section className="relative z-10  bg-gradient-to-b from-black to-red-950/10">
   <div className="mx-auto max-w-7xl px-6">
 
     {/* Heading */}

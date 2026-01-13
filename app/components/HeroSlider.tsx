@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 type Slide = {
   title: string;
@@ -33,7 +34,7 @@ export default function HeroSlider() {
         subtitle:
           "Hands-on learning built for real-world security careers in the digital age.",
         cta: "Get Started",
-        href: "/courses",
+        href: "/programmes",
         image: "/cyb.jpg",
         position: "object-center",
         badge: "Most Popular",
@@ -163,21 +164,21 @@ export default function HeroSlider() {
 
               {/* BUTTONS (DESKTOP ONLY – GOOD UX) */}
               <div className="mt-10 hidden sm:flex gap-4">
-                <a
+                <Link
                   href={slides[index].href}
                   className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-red-600 to-red-500 px-8 py-4 font-bold text-white shadow-lg shadow-red-600/40 hover:scale-105 transition"
                 >
                   {slides[index].cta}
                   <ArrowRight className="h-5 w-5" />
-                </a>
+                </Link>
 
-                <a
+                <Link 
                   href="/about"
                   className="inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur hover:bg-white/20 transition"
                 >
                   Learn More
                   <Play className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useRef, useState, useEffect } from "react";
 
 type Level = "All" | "Beginner" | "Intermediate" | "Advanced";
@@ -59,29 +60,7 @@ useEffect(() => {
     <section className="relative overflow-hidden bg-black text-white">
         
       
-      {/* Premium background */}
-      {/* Premium background */}
-{/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1100px_circle_at_20%_-10%,rgba(99,102,241,0.18),transparent_55%)]" />
-<div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_circle_at_80%_10%,rgba(239,68,68,0.20),transparent_55%)]" />
-<div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black to-black/95" />
-<div className="pointer-events-none absolute inset-0 opacity-[0.16] [background-image:radial-gradient(rgba(255,255,255,0.30)_1px,transparent_1px)] [background-size:18px_18px]" />
-
-
-      */}
-
-      
-            {/* <div className="absolute inset-0 bg-[radial-gradient(700px_circle_at_30%_40%,rgba(239,68,68,0.45),transparent_60%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(500px_circle_at_50%_70%,rgba(168,85,247,0.25),transparent_65%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(600px_circle_at_70%_30%,rgba(59,130,246,0.35),transparent_60%)]" /> */}
-
-        {/* Search bar (glass) */}
        
-  {/* <h1 className="font-serif text-5xl sm:text-7xl lg:text-5xl leading-[1.05] tracking-tight mb-8 text-center mt-24">
-              A Modern Institute Built for Real{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-red-200 to-red-400">
-                 Outcomes
-              </span>
-            </h1>      Feature Block */}
       <div
         ref={featureRef} // ✅ observe this block
         className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16"
@@ -153,26 +132,26 @@ useEffect(() => {
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a
+                  <Link
                     href="/apply-now"
                     className="rounded-full bg-red-600 px-6 py-3 text-sm font-semibold text-white hover:bg-red-700 transition"
                   >
                     Apply Now
-                  </a>
+                  </Link>
 
-                  <a
-                    href="/courses"
+                  <Link
+                    href="/programmes"
                     className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition backdrop-blur"
                   >
                     Browse Courses
-                  </a>
+                  </Link>
 
-                  <a
+                  <Link
                     href="/contact"
                     className="rounded-full border border-white/10 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10 transition"
                   >
                     Talk to Advisor
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="mt-9 grid grid-cols-3 gap-3 max-w-lg">

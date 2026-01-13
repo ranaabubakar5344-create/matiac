@@ -2,6 +2,7 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 import {
   ArrowUpRight,
@@ -99,7 +100,7 @@ const PROGRAMMES: Programme[] = [
     title: "Certificate in Creative Media",
     href: "/programmes/creative-media-l4",
     image: "/crea.jpg",
-    tag: "New",
+    tag: "KHDA Approved",
     desc: "Modern media learning with structured assignments and portfolio-focused improvement.",
     outcomes: ["Creative Projects", "Modern Media", "Portfolio Build"],
     duration: "12 months",
@@ -121,7 +122,7 @@ const PROGRAMMES: Programme[] = [
     title: "Diploma in Creative Computing",
     href: "/programmes/creative-computing-l5",
     image: "/cre.jpg",
-    tag: "KHDA Approved",
+    tag: "Popular",
     desc: "Deeper skills, bigger projects, and clearer progression built for stronger portfolios.",
     outcomes: ["Advanced Projects", "Portfolio Strong", "Progression Path"],
     duration: "12 months",
@@ -298,13 +299,13 @@ const selectedLevel = "ALL";
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
-              className="text-xl sm:text-2xl text-white/70 leading-relaxed max-w-4xl mx-auto mb-12 font-light"
+              className="text-xl sm:text-2xl text-white leading-relaxed max-w-4xl mx-auto mb-12 font-light"
             >
               EDUQUAL Levels{" "}
               <span className="text-white font-semibold bg-white/10 px-2 py-0.5 rounded">
                 3, 4 & 5
               </span>{" "}
-              — expertly designed for working professionals. Crystal-clear modules, 
+              expertly designed for working professionals. Crystal-clear modules, 
               transparent assessments, and real-world outcomes you can apply immediately.
             </motion.p>
 
@@ -541,20 +542,14 @@ const selectedLevel = "ALL";
               
               <div className="relative flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
                 <div className="max-w-2xl">
-                  <motion.span
-                    whileHover={{ scale: 1.05 }}
-                    className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur-xl mb-6"
-                  >
-                    <Sparkles className="h-5 w-5 text-red-400" />
-                    NEXT STEP
-                  </motion.span>
+                
                   <h3 className="text-3xl sm:text-6xl font-bold leading-[1.1] mb-6 text-white">
                     Not sure which level{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-red-400">
                       fits you?
                     </span>
                   </h3>
-                  <p className="text-xl text-white/70 leading-relaxed">
+                  <p className="text-xl text-white leading-relaxed">
                     Our expert admissions team will guide you through entry requirements, 
                     flexible schedules, and help you choose the perfect programme aligned 
                     with your career aspirations.

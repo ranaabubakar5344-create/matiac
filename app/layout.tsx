@@ -9,9 +9,11 @@ import FooterPremium from "./components/Footer";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "Metaverse Age",
-  description: "Metaverse Age Training Institute",
+  title: "Metaverse Age Training Institute",
+  description: "Metaverse Age Dubai offers KHDA-approved EDUQUAL Level 3, 4 & 5 programmes for working professionals. Clear pathways, flexible schedules, and career-focused outcomes.", 
+
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -243,7 +243,7 @@ export default async function ProgrammePage({ params }: PageProps) {
                 {programme.title}
               </h1>
 
-              <p className="mt-6 text-white/75 max-w-xl leading-relaxed">
+              <p className="mt-6 text-white max-w-xl leading-relaxed">
                 {programme.description}
               </p>
 
@@ -325,12 +325,12 @@ export default async function ProgrammePage({ params }: PageProps) {
             <InfoCard
               title="Course Assessment"
               text={programme.programmeInformation.courseAssessment}
-              gradient="from-red-500/20 to-orange-500/10"
+              gradient="from-red-500 to-red-500"
             />
             <InfoCard
               title="Teaching Method"
               text={programme.programmeInformation.teachingMethod}
-              gradient="from-indigo-500/20 to-purple-500/10"
+              gradient="from-indigo-500 to-purple-500"
             />
           </div>
         </section>
@@ -348,12 +348,12 @@ export default async function ProgrammePage({ params }: PageProps) {
               <SemesterCard
                 title="Semester 1"
                 items={programme.courseStructure.semester1}
-                color="from-emerald-500/30 to-teal-500/10"
+                color="from-emerald-500 to-teal-500"
               />
               <SemesterCard
                 title="Semester 2"
                 items={programme.courseStructure.semester2}
-                color="from-purple-500/30 to-indigo-500/10"
+                color="from-indigo-500 to-purple-500"
               />
             </div>
           </div>
@@ -398,7 +398,7 @@ function InfoCard({
     <div className={`rounded-3xl bg-gradient-to-br ${gradient} p-[1px]`}>
       <div className="rounded-3xl bg-black/70 p-8 backdrop-blur">
         <h3 className="text-xl font-extrabold mb-4">{title}</h3>
-        <p className="text-white/75 leading-relaxed">{text}</p>
+        <p className="text-white leading-relaxed">{text}</p>
       </div>
     </div>
   );
@@ -421,7 +421,7 @@ function SemesterCard({
           {items.map((item, i) => (
             <li
               key={i}
-              className="rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white/80"
+              className="rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white"
             >
               {item}
             </li>

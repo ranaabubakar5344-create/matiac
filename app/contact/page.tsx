@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, Sparkles, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import type { Metadata } from "next";
+
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);

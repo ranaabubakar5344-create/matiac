@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 type Programme = {
   level: "EDUQUAL LEVEL 3" | "EDUQUAL LEVEL 4" | "EDUQUAL LEVEL 5";
@@ -123,7 +124,9 @@ export default function ProgrammeSlider() {
 
     // capture pointer so drag remains smooth even if pointer goes outside
     try {
-      e.currentTarget.setPointerCapture(e.pointerId);
+if (e.pointerType !== "mouse") {
+  e.currentTarget.setPointerCapture(e.pointerId);
+}
     } catch {}
 
     isDown.current = true;
@@ -262,7 +265,7 @@ export default function ProgrammeSlider() {
                 transform: `translate3d(${cursor.x}px, ${cursor.y}px, 0)`,
               }}
             >
-              <div className="relative -translate-x-1/2 -translate-y-1/2">
+<div className="relative -translate-x-1/2 -translate-y-1/2 pointer-events-none">
                 {dragging && (
                   <div className="absolute inset-0 rounded-full border border-red-500/40 animate-ping" />
                 )}
@@ -272,6 +275,7 @@ export default function ProgrammeSlider() {
                     "h-14 w-14 rounded-full",
                     "border border-white/35 bg-black/40 backdrop-blur",
                     "flex items-center justify-center",
+                        "pointer-events-none", // 🔥 ADD THIS
                     "text-xs font-extrabold tracking-widest text-white",
                     "shadow-[0_0_30px_rgba(239,68,68,0.15)]",
                     "transition-transform duration-100 ease-out",
@@ -310,7 +314,7 @@ export default function ProgrammeSlider() {
               ].join(" ")}
             >
               {items.map((p) => (
-                <a
+                <Link
                   key={p.href}
                   href={p.href}
                   data-card="true"
@@ -397,7 +401,7 @@ export default function ProgrammeSlider() {
 
                   {/* glow */}
                   <div className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-red-500/15 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -408,246 +412,3 @@ export default function ProgrammeSlider() {
     </section>
   );
 }
-
-// "use client";
-
-// import Image from "next/image";
-// import { useMemo, useRef, useState } from "react";
-
-// type Programme = {
-//   level: "EDUQUAL LEVEL 3" | "EDUQUAL LEVEL 4" | "EDUQUAL LEVEL 5";
-//   title: string;
-//   image: string;
-//   href: string;
-// };
-
-// type Dir = -1 | 0 | 1;
-
-// export default function ProgrammeSlider() {
-//   const items = useMemo<Programme[]>(
-//     () => [
-//       {
-//         level: "EDUQUAL LEVEL 4",
-//         title: "Certificate in Cyber Security",
-//         href: "/programmes/cyber-security-l4",
-//         image: "/cyb.jpg",
-//       },
-//       {
-//         level: "EDUQUAL LEVEL 4",
-//         title: "Certificate in Psychology",
-//         href: "/programmes/psychology-l4",
-//         image: "/phys.webp",
-//       },
-//       {
-//         level: "EDUQUAL LEVEL 3",
-//         title: "Diploma in International Foundation Studies",
-//         href: "/programmes/international-foundation-studies",
-//         image: "/happy-graduated-students.jpg",
-//       },
-//       {
-//         level: "EDUQUAL LEVEL 4",
-//         title: "Certificate in Creative Computing",
-//         href: "/programmes/creative-computing-l4",
-//         image: "/cre.jpg",
-//       },
-//       {
-//         level: "EDUQUAL LEVEL 4",
-//         title: "Certificate in Business and Management",
-//         href: "/programmes/business-management-l4",
-//         image: "/buis.jpg",
-//       },
-//       {
-//         level: "EDUQUAL LEVEL 4",
-//         title: "Certificate in Creative Media",
-//         href: "/programmes/creative-media-l4",
-//         image: "/crea.jpg",
-//       },
-//     ],
-//     []
-//   );
-
-//   const scrollerRef = useRef<HTMLDivElement | null>(null);
-
-//   /* ================= DRAG LOGIC (OLD WORKING) ================= */
-//   const isDown = useRef(false);
-//   const startX = useRef(0);
-//   const startScroll = useRef(0);
-//   const moved = useRef(false);
-//   const lastX = useRef(0);
-
-//   const DRAG_SPEED = 1.4;
-//   const MOVE_THRESHOLD = 6;
-
-//   /* ================= CURSOR ================= */
-//   const [cursor, setCursor] = useState({
-//     x: 0,
-//     y: 0,
-//     visible: false,
-//     dir: 0 as Dir,
-//   });
-
-//   const updateCursor = (clientX: number, clientY: number) => {
-//     const el = scrollerRef.current;
-//     if (!el) return;
-
-//     const rect = el.getBoundingClientRect();
-//     const dx = clientX - lastX.current;
-//     lastX.current = clientX;
-
-//     let dir: Dir = 0;
-//     if (dx > 2) dir = 1;
-//     else if (dx < -2) dir = -1;
-
-//     setCursor({
-//       x: clientX - rect.left,
-//       y: clientY - rect.top,
-//       visible: true,
-//       dir,
-//     });
-//   };
-
-//   const onPointerDown = (e: React.PointerEvent) => {
-//     const el = scrollerRef.current;
-//     if (!el) return;
-
-//     e.currentTarget.setPointerCapture(e.pointerId);
-
-//     isDown.current = true;
-//     moved.current = false;
-
-//     const rect = el.getBoundingClientRect();
-//     startX.current = e.clientX - rect.left;
-//     startScroll.current = el.scrollLeft;
-//     lastX.current = e.clientX;
-
-//     updateCursor(e.clientX, e.clientY);
-//   };
-
-//   const onPointerMove = (e: React.PointerEvent) => {
-//     updateCursor(e.clientX, e.clientY);
-
-//     const el = scrollerRef.current;
-//     if (!el || !isDown.current) return;
-
-//     e.preventDefault();
-
-//     const rect = el.getBoundingClientRect();
-//     const x = e.clientX - rect.left;
-//     const dx = x - startX.current;
-
-//     if (!moved.current && Math.abs(dx) > MOVE_THRESHOLD) {
-//       moved.current = true;
-//     }
-
-//     el.scrollLeft = startScroll.current - dx * DRAG_SPEED;
-//   };
-
-//   const endPointer = () => {
-//     isDown.current = false;
-
-//     setTimeout(() => {
-//       moved.current = false;
-//     }, 180);
-//   };
-
-//   const cursorLabel =
-//     cursor.dir === -1 ? "←" : cursor.dir === 1 ? "→" : "DRAG";
-
-//   /* ================= RENDER ================= */
-
-//   return (
-//     <section className="relative overflow-hidden bg-[#07080f] text-white">
-//       <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_15%_10%,rgba(239,68,68,0.30),transparent_60%)]" />
-//       <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_85%_20%,rgba(59,130,246,0.25),transparent_60%)]" />
-//       <div className="absolute inset-0 bg-[radial-gradient(800px_circle_at_50%_90%,rgba(168,85,247,0.22),transparent_65%)]" />
-//       <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/95" />
-
-//       <div className="relative mx-auto max-w-7xl px-4 py-20">
-//         <h2 className="text-5xl font-extrabold">
-//           Reshape Your{" "}
-//           <span className="bg-gradient-to-r from-red-400 to-indigo-400 bg-clip-text text-transparent">
-//             Future
-//           </span>
-//         </h2>
-
-//         <p className="mt-4 max-w-2xl text-white/80 text-lg">
-//           Discover industry-focused programmes designed for modern careers.
-//         </p>
-
-//         <div className="relative mt-12">
-//           {/* CUSTOM DRAG CURSOR */}
-//           <div
-//             className={`pointer-events-none absolute z-30 hidden md:block transition-opacity ${
-//               cursor.visible ? "opacity-100" : "opacity-0"
-//             }`}
-//             style={{
-//               transform: `translate3d(${cursor.x}px, ${cursor.y}px, 0)`,
-//             }}
-//           >
-//             <div className="-translate-x-1/2 -translate-y-1/2">
-//               <div className="h-14 w-14 rounded-full bg-black/60 border border-white/30 flex items-center justify-center text-xs font-bold tracking-widest">
-//                 {cursorLabel}
-//               </div>
-//             </div>
-//           </div>
-
-//           <div
-//             ref={scrollerRef}
-//             onPointerEnter={(e) => {
-//               lastX.current = e.clientX;
-//               updateCursor(e.clientX, e.clientY);
-//             }}
-//             onPointerLeave={() =>
-//               !isDown.current &&
-//               setCursor((p) => ({ ...p, visible: false }))
-//             }
-//             onPointerDown={onPointerDown}
-//             onPointerMove={onPointerMove}
-//             onPointerUp={endPointer}
-//             onPointerCancel={endPointer}
-//             style={{ touchAction: "pan-y" }}
-//             className="flex gap-6 overflow-x-auto pb-6 snap-x snap-proximity
-//               [scrollbar-width:none] [-ms-overflow-style:none]
-//               cursor-none"
-//           >
-//             {items.map((p) => (
-//               <a
-//                 key={p.href}
-//                 href={p.href}
-//                 onClick={(e) => moved.current && e.preventDefault()}
-//                 className="group relative snap-start shrink-0
-//                   w-[86%] sm:w-[440px] lg:w-[520px]
-//                   h-[380px] sm:h-[440px]
-//                   rounded-[32px] overflow-hidden
-//                   ring-1 ring-white/20"
-//               >
-//                 <Image
-//                   src={p.image}
-//                   alt={p.title}
-//                   fill
-//                   draggable={false}
-//                   className="object-cover pointer-events-none"
-//                 />
-
-//                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
-
-//                 <div className="absolute bottom-0 p-7">
-//                   <h3 className="text-xl font-extrabold">{p.title}</h3>
-
-//                   <div className="mt-5 flex justify-between items-center">
-//                     <span className="rounded-full bg-red-600 px-5 py-2 text-sm font-semibold">
-//                       View Programme
-//                     </span>
-//                     <div className="h-11 w-11 rounded-full bg-white/15 flex items-center justify-center">
-//                       →
-//                     </div>
-//                   </div>
-//                 </div>
-//               </a>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }

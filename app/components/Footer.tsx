@@ -54,7 +54,7 @@ export default function FooterPremium() {
 
             {/* quick contacts */}
             <div className="mt-6 space-y-3">
-              <a
+              <Link
                 href="tel:043393803"
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white/85 hover:bg-white/[0.07] transition"
               >
@@ -62,9 +62,9 @@ export default function FooterPremium() {
                   <Phone className="h-4 w-4 text-red-400" />
                 </span>
                 <span className="truncate">04-339-3803</span>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="mailto:admissions@metaverseage.ae"
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white/85 hover:bg-white/[0.07] transition"
               >
@@ -72,7 +72,7 @@ export default function FooterPremium() {
                   <Mail className="h-4 w-4 text-red-400" />
                 </span>
                 <span className="truncate">admissions@metaverseage.ae</span>
-              </a>
+              </Link>
 
               <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white/85">
                 <span className="h-9 w-9 rounded-xl border border-white/10 bg-black/30 flex items-center justify-center">
@@ -90,7 +90,6 @@ export default function FooterPremium() {
                 { Icon: Instagram, href: "#", label: "Instagram" },
                 { Icon: Facebook, href: "#", label: "Facebook" },
                 { Icon: Linkedin, href: "#", label: "LinkedIn" },
-                { Icon: Youtube, href: "#", label: "YouTube" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -110,17 +109,16 @@ export default function FooterPremium() {
               <FooterCol
                 title="Programs"
                 links={[
-                  { label: "All Courses", href: "/courses" },
-                  { label: "Diplomas", href: "/courses" },
-                  { label: "Short Courses", href: "/courses" },
-                  { label: "Certifications", href: "/courses" },
+                  { label: "All Courses", href: "/programmes" },
+                  { label: "Short Courses", href: "/shortcourses" },
+                  { label: "Certifications", href: "/programmes" },
                 ]}
               />
               <FooterCol
                 title="Institute"
                 links={[
                   { label: "About Us", href: "/about" },
-                  { label: "Why Choose Us", href: "/#wcu" },
+                  { label: "Why Choose Us", href: "/about" },
                   { label: "Admissions", href: "/apply-now" },
                   { label: "Contact", href: "/contact" },
                 ]}
@@ -128,10 +126,10 @@ export default function FooterPremium() {
               <FooterCol
                 title="Support"
                 links={[
-                  { label: "FAQs", href: "/faq" },
-                  { label: "Policies", href: "/policies" },
-                  { label: "Privacy Policy", href: "/privacy" },
-                  { label: "Terms & Conditions", href: "/terms" },
+                  { label: "FAQs", href: "/#" },
+                  { label: "Policies", href: "/#" },
+                  { label: "Privacy Policy", href: "/#" },
+                  { label: "Terms & Conditions", href: "/#" },
                 ]}
               />
             </div>

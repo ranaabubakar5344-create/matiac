@@ -9,9 +9,15 @@ import StoryNumbers from './components/StoryNumbers';
 import Testimonials from "./components/Testimonials";
 import FAQPremium from "./components/Faq";
 import ShortCoursesSlider from "./components/ShortCoursesSlider";
+ 
 export default function HomePage() {
+
+
   return (
+
+    
     <main className="min-h-screen">
+
       <Navbar />
       <HeroSlider />
       <FeaturedCourses/>

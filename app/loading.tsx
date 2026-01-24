@@ -21,11 +21,12 @@ export default function Loading() {
           <div className="absolute inset-0 rounded-full border-t-red-500 border-4 animate-spin" />
 
           {/* Center logo */}
+          
           <div className="absolute inset-3 rounded-full
                           bg-black border border-white/15
                           flex items-center justify-center
                           text-white font-extrabold text-xl tracking-widest">
-            Metaverse Age 
+            Metaverse 
           </div>
         </div>
 

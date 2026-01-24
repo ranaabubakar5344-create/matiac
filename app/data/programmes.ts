@@ -1,7 +1,7 @@
 export const programmes = [
   {
     slug: "international-foundation-studies-l3",
-    level: "EDUQUAL LEVEL 3",
+    level: "EduQual LEVEL 3",
     title: "Diploma in International Foundation Studies",
     duration: "1 Year",
     intake: "September",
@@ -40,8 +40,8 @@ export const programmes = [
 
   {
     slug: "business-management-l4",
-    level: "EDUQUAL LEVEL 4",
-    title: "Certificate in Business and Management",
+    level: "EduQual LEVEL 4",
+    title: "Certificate in Business Management",
     duration: "1 Year",
     intake: "September",
     delivery: "Day",
@@ -58,21 +58,21 @@ export const programmes = [
 
     courseStructure: {
       semester1: [
-        "The Business Environment",
+        "Understanding for Business Environment",
+        "Personal and Professional Development",
         "Statistics for Managers",
-        "Professional Development",
       ],
       semester2: [
-        "Economics and Globalisation",
-        "Organisational Behaviour",
+        "Economics for Decision Making",
         "Enterprise Design Thinking",
+        "Organisation Behaviour.Theory and Practice",
       ],
     },
   },
 
   {
     slug: "creative-computing-l4",
-    level: "EDUQUAL LEVEL 4",
+    level: "EduQual LEVEL 4",
     title: "Certificate in Creative Computing",
     duration: "1 Year",
     intake: "September",
@@ -100,7 +100,7 @@ export const programmes = [
         "Digital Media and Storytelling",
       ],
       semester2: [
-        "UI/UX Design",
+        "UX Design",
         "Web Programming",
         "Creative Strategies",
       ],
@@ -109,7 +109,7 @@ export const programmes = [
 
   {
     slug: "psychology-l4",
-    level: "EDUQUAL LEVEL 4",
+    level: "EduQual LEVEL 4",
     title: "Certificate in Psychology",
     duration: "1 Year",
     intake: "September",
@@ -128,21 +128,21 @@ export const programmes = [
 
     courseStructure: {
       semester1: [
-        "Introduction to Psychology",
-        "Introduction to Business Psychology",
-        "Research Methods in Psychology 1",
+        "Understanding Psychology",
+        "Research Methodology and Data Analysis",
+        "Issues and Debates in Psychology",
       ],
       semester2: [
-        "Individual Differences: Personality and Intelligence",
-        "Debates in Psychology and Critical Thinking",
-        "Organizational Behaviour and Management",
+        "Individual Differences",
+        "Psychological Science for Student Success",
+        "World of Ideas",
       ],
     },
   },
 
   {
     slug: "cyber-security-l4",
-    level: "EDUQUAL LEVEL 4",
+    level: "EduQual LEVEL 4",
     title: "Certificate in Cyber Security",
     duration: "1 Year",
     intake: "September",
@@ -174,7 +174,7 @@ export const programmes = [
 
   {
     slug: "creative-media-l4",
-    level: "EDUQUAL LEVEL 4",
+    level: "EduQual LEVEL 4",
     title: "Certificate in Creative Media",
     duration: "1 Year",
     intake: "September",
@@ -195,7 +195,7 @@ export const programmes = [
       semester1: [
         "Audiovisual Production for Digital Platforms",
         "Cinematic Drama Production",
-        "PhotographyArtistic Photographic Expression",
+        "Artistics Photographic Expression",
       ],
       semester2: [
         "Media Production in the Digital Age",
@@ -207,7 +207,7 @@ export const programmes = [
 
   {
     slug: "business-management-l5",
-    level: "EDUQUAL LEVEL 5",
+    level: "EduQual LEVEL 5",
     title: "Diploma in Business Management",
     duration: "1 Year",
     intake: "September",
@@ -231,16 +231,16 @@ export const programmes = [
        "Managing Operations & Projects",
       ],
       semester2: [
-        "Economics & Globalisation",
-        "Organisational Behaviour",
-        "Enterprise Design Thinking",
+        "Introduction to Entrepreneurship",
+        "Specialisation in Practice",
+        "Managing Innovations",
       ],
     },
   },
 
   {
     slug: "creative-computing-l5",
-    level: "EDUQUAL LEVEL 5",
+    level: "EduQual LEVEL 5",
     title: "Diploma in Creative Computing",
     duration: "1 Year",
     intake: "September",
@@ -273,7 +273,7 @@ export const programmes = [
 
   {
     slug: "psychology-l5",
-    level: "EDUQUAL LEVEL 5",
+    level: "EduQual LEVEL 5",
     title: "Diploma in Psychology",
     duration: "1 Year",
     intake: "September",
@@ -291,21 +291,21 @@ export const programmes = [
 
     courseStructure: {
       semester1: [
-        "Cognitive Development Through Ages",
-        "Human Resource Management",
         "Research Methodology and Data Analysis II",
+        "Health Psychology",
+        "Cognitive Development Through Ages",
       ],
       semester2: [
-        "Psychology in Clinical Settings",
         "Psychology based on Biology and Society",
-        "Modern Applications in Business Psychology",
+        "Clinical Psychology",
+        "Criminal and Forensic Psychology",
       ],
     },
   },
 
   {
     slug: "cyber-security-l5",
-    level: "EDUQUAL LEVEL 5",
+    level: "EduQual LEVEL 5",
     title: "Diploma in Cyber Security",
     duration: "1 Year",
     intake: "September",
@@ -332,6 +332,105 @@ export const programmes = [
         "Intrusion Analysis",
         "Cyber Resilience",
         "Computer Software",
+      ],
+    },
+  },
+
+
+  // ...more programmes
+
+    {
+    slug: "bm-accounting-l4",
+    level: "EduQual LEVEL 4",
+    title: "Certificate in Business Management Accounting",
+    duration: "1 Year",
+    intake: "September",
+    delivery: "Day",
+    image: "/bml.jpg",
+    description: "The Certificate in Business and Management (Accounting) equips students with essential skills for careers in accounting, finance, investments, auditing, taxation, and strategic finance roles. The program offers in-depth knowledge of financial analysis,investment evaluation, financial planning, and strategic decision-making. Students alsoengage in tailored work-based projects, collaborating with peers to tackle real business challenges, providing both theoretical knowledge and practical experience. With a rising demand for accounting and finance professionals in the UAE, especially due to VAT and corporate tax in the GCC, graduates will be well-prepared for strong job opportunities in the region.",
+  
+    programmeInformation: {
+      courseAssessment:"Students will have assessments that encompass a variety of methods to evaluate their business knowledge and management skills. These may include presentations, work-based projects, group activities, computer simulations, podcasts, un-seen exams, and business reports.",
+      teachingMethod:
+        "Teaching approach is diverse, combining lectures with interactive challenges to encourage independent learning. Most modules feature a blend of lectures and small group seminars. All our teaching methods are designed to support students growth as a self-directed learner. Our faculty is dedicated and approachable, providing personal support to help you achieve your academic and career goals.",
+    },
+
+    courseStructure: {
+      semester1: [
+        "Understanding Business Environment",
+        "Statistics for Managers",
+        "Financial Accounting for Managers",
+      ],
+      semester2: [
+        "Cost and Management Accounting",
+        "Organisation Behaviour Theory and Practice",
+        "Economics for Decision Making",
+      ],
+    },
+  },
+  // ...more programmes
+
+    {
+    slug: "bm-accounting-l5",
+    level: "EduQual LEVEL 5",
+    title: "Certificate in Business Management Accounting",
+    duration: "1 Year",
+    intake: "September",
+    delivery: "Day",
+    image: "/bml.jpg",
+    description: "The Diploma in Business and Management:Accounting at Level 5 is designed to develop advanced knowledge and practical skills required for supervisory and managerial roles in accounting, finance, taxation, and business management.The programme builds on foundational concepts and focuses on applied learning in areas such as UK taxation, business law, performance management, innovation, and contemporary human resource practices.Students gain a deeper understanding of legal, financial, and strategic business environments while enhancing their analytical and decision-making capabilities. Through work-based projects and collaborative activities, learners address real-world business challenges, enabling them to bridge theory and practice effectively.Given the growing demand for skilled accounting and finance professionals in the UAE—particularly due to VAT, corporate taxation, and regulatory compliance in the GCC—graduates of this qualification will be well-positioned for career progression and enhanced employment opportunities.",
+  
+    programmeInformation: {
+      courseAssessment:"Students will have assessments that encompass a variety of methods to evaluate their business knowledge and management skills. These may include presentations, work-based projects, group activities, computer simulations, podcasts, un-seen exams, and business reports.",
+      teachingMethod:
+        "Teaching approach is diverse, combining lectures with interactive challenges to encourage independent learning. Most modules feature a blend of lectures and small group seminars. All our teaching methods are designed to support students growth as a self-directed learner. Our faculty is dedicated and approachable, providing personal support to help you achieve your academic and career goals.",
+    },
+
+    courseStructure: {
+      semester1: [
+        "Business Law",
+        "Business Creativity",
+        "UK Taxation",
+      ],
+      semester2: [
+        "Performance Management",
+        "Managing Innovation",
+        "Contemporary Human Resource Management",
+      ],
+    },
+  },
+
+  //...more programmes
+
+  {
+    slug: "creative-media-l5",
+    level: "EduQual LEVEL 5",
+    title: "Diploma in Creative Media",
+    duration: "1 Year",
+    intake: "September",
+    delivery: "Day",
+    image: "/crea.jpg",
+    description:
+      "The Diploma in Creative Media is a Level 5 qualification that provides students with advanced knowledge and practical skills to critically understand and apply models, tools,and techniques used in contemporary media and creative industries. This course is designed to address the evolving needs of the media and creative sectors and is developed and delivered in partnership with industry professionals. The programme further develops students’ creative and technical potential through an innovative and practice-led curriculum that encourages them to become critical, reflective practitioners who are aware of the challenges and opportunities within modern media environments.Learners will enhance their competencies to pursue and progress in careers across marketing, media production, digital content creation, visual effects, and related creative fields. Students will refine the attitudes, skills, and abilities required for professional creative media practice, gaining hands-on experience with advanced digital tools, visual effects techniques, promotional content creation, and end-to-end content commissioning processes. This qualification prepares students for further academic progression, including study at Honours degree level, and for employment in higher-level creative and media roles.",
+    
+
+    programmeInformation: {
+      courseAssessment:
+        "Assessment includes both structured and open-ended tasks, such as coursework assignments (which may involve creative problem-solving activities, media simulations, industry-based projects, filming, animation, individual and group reports, as well as traditional formats like essays and analytical assignments), media presentations, and reflective assessments (e.g., digital portfolios, creative journals, and peer collaboration activities).",
+      teachingMethod:
+        "The learning is supported through various methods. Students will be engaged in media production sessions using state-of-the-art media facilities and advanced digital technologies.In seminars and workshops, students will plan, discuss, and critically analyse projects and reference materials, culminating in professional presentations, exhibitions, and showcases of their work. An experienced team of media professionals and technical staff will provide guidance, while guest speakers and mentors from the creative media industry will enhance the student experience by linking learning to current industry practices and emerging trends.",
+    },
+
+    courseStructure: {
+      semester1: [
+        "Advanced Digital Tools &amp; Techniques",
+        "Introduction to VFX",
+        "Interactive Storytelling",
+      ],
+      semester2: [
+        "Promotional Content Creation",
+        "Mastering Microcontent: Engaging Audiences in the Age of Attention Deficit",
+        "From Concept to Delivery: The Content Commissioning Process A – Z",
       ],
     },
   },

@@ -153,69 +153,88 @@ const CATEGORIES = [
 
 export default function ShortCoursesPage() {
   return (
-    <main className="bg-black text-white overflow-hidden">
-      {/* HERO  */}
-      <section className="relative pt-32 pb-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 via-black to-black" />
-        <div className="absolute inset-0 opacity-[0.05] [background-image:radial-gradient(rgba(255,255,255,0.12)_1px,transparent_1px)] [background-size:24px_24px]" />
+<main className="relative text-white overflow-hidden
+  bg-gradient-to-br from-[#0f1016] via-[#111827] to-[#0b0c12]">
+
+      <section className="relative pt-36 pb-28">
+        {/* cinematic background */}
+       <div className="absolute inset-0
+  bg-gradient-to-br from-red-600/20 via-[#111827] to-[#0b0c12]" />
+
+        <div className="absolute inset-0 opacity-[0.08] [background-image:radial-gradient(rgba(255,255,255,0.12)_1px,transparent_1px)] [background-size:22px_22px]" />
+
+        {/* glow */}
+        <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/20 blur-[160px]" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 backdrop-blur-xl mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 backdrop-blur-xl mb-8">
             <Sparkles className="h-4 w-4 text-red-400" />
-            <span className="text-sm font-semibold">SHORT COURSES</span>
+            <span className="text-sm font-semibold tracking-wide">
+              SHORT COURSES
+            </span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-bold mb-6">
-            Explore a Diverse Range of{" "}
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+            Industry-Focused{" "}
             <span className="bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent">
-              Transformative Programmes
+              Short Courses
             </span>
           </h1>
 
-          <p className="text-white/70 max-w-3xl mx-auto text-lg">
-            Industry-focused short courses designed to enhance skills, accelerate
-            careers, and unlock new opportunities.
+          <p className="text-white/70 max-w-3xl mx-auto text-lg sm:text-xl">
+            Practical, career-driven programmes designed to upgrade skills,
+            empower professionals, and open new opportunities.
           </p>
         </div>
       </section>
+      
 
-      {/* COURSES  */}
-      <section className="pb-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-20">
+      {/* COURSES */}
+      <section className="relative pb-32">
+        {/* section glow */}
+<div className="absolute inset-0
+  bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.12),transparent_60%)]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-28">
           {CATEGORIES.map((cat, i) => (
             <motion.div
               key={cat.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
+              transition={{ duration: 0.6, delay: i * 0.04 }}
             >
-              <h2 className="text-2xl sm:text-3xl font-bold mb-8 border-l-4 border-red-500 pl-4">
-                {cat.title}
-              </h2>
+              {/* CATEGORY HEADER */}
+              <div className="mb-10 flex items-center gap-4">
+                <div className="h-10 w-1 rounded-full bg-gradient-to-b from-red-500 to-red-700" />
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
+                  {cat.title}
+                </h2>
+              </div>
 
+              {/* COURSES GRID */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cat.courses.map((course) => (
-                  <div
+                  <motion.div
                     key={course}
-                    className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:border-red-500/50 hover:bg-white/10 transition"
+                    whileHover={{ y: -6 }}
+                    transition={{ duration: 0.3 }}
+                    className="group relative overflow-hidden rounded-2xl border border-white/15 bg-gradient-to-br from-white/[0.12] to-white/[0.04] backdrop-blur-2xl p-6
+                               hover:border-red-500/50 hover:shadow-[0_20px_60px_rgba(220,38,38,0.25)]"
                   >
-                    <p className="text-lg font-medium group-hover:text-red-400 transition">
+                    {/* hover glow */}
+                    <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-red-600/0 blur-3xl transition-all duration-500 group-hover:bg-red-600/30" />
+
+                    <p className="relative text-lg font-semibold text-white/90 group-hover:text-red-400 transition">
                       {course}
                     </p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
       </section>
-      <section>
-        <div className="">
-            
-        </div>
-      </section>
     </main>
   );
-  
 }

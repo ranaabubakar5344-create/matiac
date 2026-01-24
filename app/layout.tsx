@@ -5,7 +5,8 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import FooterPremium from "./components/Footer";
-
+import WhatsAppFloat from "./components/WhatsAppFloat";
+import CookieConsent from "./components/CookieConsent";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -38,6 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black dark:bg-black dark:text-white`}>
         <Navbar />
         {children}
+        <WhatsAppFloat />
+        <CookieConsent />
         <FooterPremium />
       </body>
     </html>

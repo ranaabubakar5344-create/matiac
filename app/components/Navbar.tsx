@@ -118,7 +118,8 @@ export default function Header() {
                 ))}
 
                 <Link
-                  href="/study-portal"
+                 href="https://lms.mati.ac.ae/"
+              target="blank"
                   onClick={() => setOpen(false)}
                   className="mt-2 rounded-xl border border-white/30 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-white/10"
                 >

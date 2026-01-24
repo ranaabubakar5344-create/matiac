@@ -49,9 +49,9 @@ export default function ContactPage() {
       {/* ================= CONTACT INFO ================= */}
       <section className="pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-8 lg:grid-cols-3">
-          <ContactCard icon={<Phone />} title="Call Us" value="+971 55 460 2947" />
+          <ContactCard icon={<Phone />} title="Call Us" value="04 339 3803" />
           <ContactCard icon={<Mail />} title="Email" value="admissions@metaverseage.ae" />
-          <ContactCard icon={<MapPin />} title="Visit Us" value="Dubai, United Arab Emirates" />
+          <ContactCard icon={<MapPin />} title="Visit Us" value="Office 339, Office Tower, Al Ghurair Center, Deira Dubai" />
         </div>
       </section>
 

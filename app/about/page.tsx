@@ -80,7 +80,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="max-w-3xl mx-auto text-xl text-white mb-14">
-              A KHDA approved institute delivering structured EDUQUAL pathways
+              A KHDA approved institute delivering structured Eduqual pathways
               designed for clarity, credibility, and career progression.
             </p>
 
@@ -94,7 +94,7 @@ export default function AboutPage() {
 
             <div className="mt-14 flex flex-wrap justify-center gap-4">
               <TrustPill icon={BadgeCheck} text="KHDA Approved" />
-              <TrustPill icon={GraduationCap} text="EDUQUAL Levels 3–5" />
+              <TrustPill icon={GraduationCap} text="Eduqual Levels 3–5" />
               <TrustPill icon={ShieldCheck} text="Quality Assured" />
               <TrustPill icon={MapPin} text="Dubai, UAE" />
             </div>
@@ -106,7 +106,7 @@ export default function AboutPage() {
       <section className="relative z-10 -mt-20 pb-28">
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: Users, value: "4,500+", label: "Students Enrolled" },
+            { icon: Users, value: "1,000+", label: "Students Enrolled" },
             { icon: Award, value: "98%", label: "Success Rate" },
             { icon: TrendingUp, value: "85%", label: "Career Growth" },
             { icon: Building2, value: "10+", label: "Years Experience" },
@@ -128,7 +128,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-5">
             <h2 className="font-serif text-5xl font-bold mb-6">
-              Why <span className="text-red-400">Metaverse Age</span>
+              Why <span className="text-red-400">Metaverse Age Training Institute</span>
             </h2>
             <p className="text-lg text-white/90 mb-10">
               Metaverse Age Training Institute is an approved and permitted institution by Knowledge Human Development Authority Dubai - United Arab Emirates. It is a training institute that aims to reshape the typical and the conventional learning in response to the current needs of the modern world.
@@ -139,7 +139,7 @@ export default function AboutPage() {
             <ul className="space-y-4">
               {[
                 "KHDA approved training institute",
-                "UK awarded EDUQUAL qualifications",
+                "UK awarded Eduqual qualifications",
                 "Clear academic progression",
                 "Dedicated learner support",
               ].map((item, i) => (
@@ -258,7 +258,7 @@ export default function AboutPage() {
         <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-purple-600/25 blur-[120px]" />
 
         <h3 className="text-2xl font-bold mb-2">
-          EduQual UK LTD
+           Eduqual UK LTD
         </h3>
 
         <p className="text-sm uppercase tracking-wide text-red-400 mb-6">
@@ -267,13 +267,13 @@ export default function AboutPage() {
 
         <div className="space-y-5 text-white leading-relaxed">
           <p>
-            EduQual UK LTD is a globally recognised awarding organisation
+            Eduqual UK LTD is a globally recognised awarding organisation
             specialising in vocational and technical education, committed
             to maintaining rigorous academic standards and excellence.
           </p>
 
           <p>
-            EduQual is a regulated awarding body, approved by
+             Eduqual is a regulated awarding body, approved by
             <strong> SQA Accreditation</strong>, the UK’s national
             qualifications regulator, and is a full member of the
             <strong> Federation of Awarding Bodies (FAB)</strong>.
@@ -281,14 +281,14 @@ export default function AboutPage() {
 
           <p>
             Metaverse Age Training Institute is an
-            <strong> approved centre of EduQual UK</strong>. This approval
-            reflects the Institute’s adherence to EduQual’s quality
+            <strong> approved centre of  Eduqual UK</strong>. This approval
+            reflects the Institute’s adherence to Eduqual’s quality
             assurance processes, assessment standards, and educational
             benchmarks.
           </p>
 
           <p>
-            Learners enrolled in EduQual-approved programmes can trust
+            Learners enrolled in Eduqual-approved programmes can trust
             the international recognition, credibility, and academic
             value of their qualifications.
           </p>

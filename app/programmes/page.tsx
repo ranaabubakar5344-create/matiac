@@ -25,7 +25,7 @@ import { motion } from "framer-motion";
 import ParticlesLayer from "@/app/components/ParticlesLayer";
 
 
-type Level = "EDUQUAL LEVEL 3" | "EDUQUAL LEVEL 4" | "EDUQUAL LEVEL 5";
+type Level = "EduQual LEVEL 3" | "EduQual LEVEL 4" | "EduQual LEVEL 5";
 
 type Programme = {
   level: Level;
@@ -41,7 +41,7 @@ type Programme = {
 
 const PROGRAMMES: Programme[] = [
   {
-    level: "EDUQUAL LEVEL 3",
+    level: "EduQual LEVEL 3",
     title: "Diploma in International Foundation Studies",
     href: "/programmes/international-foundation-studies-l3",
     image: "/happy-graduated-students.jpg",
@@ -52,8 +52,8 @@ const PROGRAMMES: Programme[] = [
     students: "500+",
   },
   {
-    level: "EDUQUAL LEVEL 4",
-    title: "Certificate in Business and Management",
+    level: "EduQual LEVEL 4",
+    title: "Certificate in Business Management",
     href: "/programmes/business-management-l4",
     image: "/buisn.jpg",
     tag: "KHDA Approved",
@@ -63,7 +63,7 @@ const PROGRAMMES: Programme[] = [
     students: "800+",
   },
   {
-    level: "EDUQUAL LEVEL 4",
+    level: "EduQual LEVEL 4",
     title: "Certificate in Creative Computing",
     href: "/programmes/creative-computing-l4",
     image: "/cre.jpg",
@@ -74,7 +74,7 @@ const PROGRAMMES: Programme[] = [
     students: "650+",
   },
   {
-    level: "EDUQUAL LEVEL 4",
+    level: "EduQual LEVEL 4",
     title: "Certificate in Psychology",
     href: "/programmes/psychology-l4",
     image: "/phy.jpg",
@@ -85,7 +85,7 @@ const PROGRAMMES: Programme[] = [
     students: "420+",
   },
   {
-    level: "EDUQUAL LEVEL 4",
+    level: "EduQual LEVEL 4",
     title: "Certificate in Cyber Security",
     href: "/programmes/cyber-security-l4",
     image: "/cyber.jpg",
@@ -96,7 +96,7 @@ const PROGRAMMES: Programme[] = [
     students: "920+",
   },
     {
-    level: "EDUQUAL LEVEL 5",
+    level: "EduQual LEVEL 5",
     title: "Diploma in Cyber Security",
     href: "/programmes/cyber-security-l5",
     image: "/cyb.jpg",
@@ -107,7 +107,7 @@ const PROGRAMMES: Programme[] = [
     students: "780+",
   },
    {
-    level: "EDUQUAL LEVEL 5",
+    level: "EduQual LEVEL 5",
     title: "Diploma in Business Management",
     href: "/programmes/business-management-l5",
     image: "/bm.jpg",
@@ -118,7 +118,7 @@ const PROGRAMMES: Programme[] = [
     students: "700+",
   },
   {
-    level: "EDUQUAL LEVEL 4",
+    level: "EduQual LEVEL 4",
     title: "Certificate in Creative Media",
     href: "/programmes/creative-media-l4",
     image: "/crea.jpg",
@@ -129,7 +129,7 @@ const PROGRAMMES: Programme[] = [
     students: "380+",
   },
   {
-    level: "EDUQUAL LEVEL 5",
+    level: "EduQual LEVEL 5",
     title: "Diploma in Creative Computing",
     href: "/programmes/creative-computing-l5",
     image: "/cre.jpg",
@@ -140,7 +140,7 @@ const PROGRAMMES: Programme[] = [
     students: "540+",
   },
   {
-    level: "EDUQUAL LEVEL 5",
+    level: "EduQual LEVEL 5",
     title: "Diploma in Psychology",
     href: "/programmes/psychology-l5",
     image: "/phys.webp",
@@ -150,7 +150,41 @@ const PROGRAMMES: Programme[] = [
     duration: "12 months",
     students: "360+",
   },
-   
+// new addition programs 
+   {
+    level: "EduQual LEVEL 4",
+    title: "Certificate in Business Management Accounting",
+    href: "/programmes/bm-accounting-l4",
+    image: "/bml.jpg",
+    tag: "New",
+    desc: "Business Management with advanced curriculum and dedicated student support.",
+    outcomes: ["Advanced Topics", "Academic Structure", "Tutor Support"],
+    duration: "12 months",
+    students: "290+",
+  },
+     {
+    level: "EduQual LEVEL 5",
+    title: "Diploma in Business Management Accounting",
+    href: "/programmes/bm-accounting-l5",
+    image: "/bml.jpg",
+    tag: "New",
+    desc: "Develop expertise in business strategy, operations, and decision-making within a premium academic experience.",
+    outcomes: ["Advanced Topics", "Academic Structure", "Tutor Support"],
+    duration: "12 months",
+    students: "290+",
+  },
+
+    {
+    level: "EduQual LEVEL 5",
+    title: "Diploma in Creative Media",
+    href: "/programmes/creative-media-l5",
+    image: "/crea.jpg",
+    tag: "KHDA Approved",
+    desc: "Modern media learning with structured assignments and portfolio-focused improvement.",
+    outcomes: ["Creative Projects", "Modern Media", "Portfolio Build"],
+    duration: "12 months",
+    students: "380+",
+  },
 ];
 
 function countBy(level: Level) {
@@ -302,7 +336,7 @@ const selectedLevel = "ALL";
               transition={{ delay: 0.7, duration: 0.8 }}
               className="text-xl sm:text-2xl text-white leading-relaxed max-w-4xl mx-auto mb-12 font-light"
             >
-              EDUQUAL Levels{" "}
+              EduQual Levels{" "}
               <span className="text-white font-semibold bg-white/10 px-2 py-0.5 rounded">
                 3, 4 & 5
               </span>{" "}
@@ -358,7 +392,7 @@ const selectedLevel = "ALL";
                 <TrustPill icon={BadgeCheck} text="KHDA Approved" highlight />
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <TrustPill icon={GraduationCap} text="EDUQUAL Levels 3/4/5" />
+                <TrustPill icon={GraduationCap} text="EduQual Levels 3/4/5" />
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <TrustPill icon={ShieldCheck} text="Quality Assured" />

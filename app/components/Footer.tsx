@@ -12,8 +12,18 @@ import {
   Linkedin,
   Youtube,
 } from "lucide-react";
+import { useState } from "react";
 
 export default function FooterPremium() {
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+e.preventDefault();
+
+
+// yahan baad mein API call laga sakte ho
+setSubscribed(true);
+};
   const year = new Date().getFullYear();
 
   return (
@@ -145,22 +155,31 @@ export default function FooterPremium() {
                  
                 </div>
 
-                <form
-                  onSubmit={(e) => e.preventDefault()}
-                  className="flex w-full max-w-xl flex-col gap-3 sm:flex-row"
-                >
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className="w-full rounded-2xl border border-white/10 bg-black/30 px-5 py-3 text-sm text-white placeholder:text-white/40 outline-none focus:border-white/25"
-                  />
-                  <button
-                    type="submit"
-                    className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-white/90 transition"
-                  >
-                    Subscribe
-                  </button>
-                </form>
+               {!subscribed ? (
+<form
+onSubmit={handleSubmit}
+className="flex w-full max-w-xl flex-col gap-3 sm:flex-row"
+>
+<input
+type="email"
+required
+placeholder="Your email address"
+className="w-full rounded-2xl border border-white/10 bg-black/30 px-5 py-3 text-sm text-white placeholder:text-white/40 outline-none focus:border-white/25"
+/>
+<button
+type="submit"
+className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-white/90 transition"
+>
+Subscribe
+</button>
+</form>
+) : (
+<div className="w-full max-w-xl rounded-2xl border border-green-500/30 bg-green-500/10 px-5 py-4">
+<p className="text-sm font-medium text-green-400">
+Thank you for subscribing to our newsletter!
+</p>
+</div>
+)}
               </div>
             </div>
           </div>
